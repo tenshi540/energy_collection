@@ -1,11 +1,20 @@
-a small project for the lecture "distributed systems"
+# Distributed Systems – Energy Data Project
 
-intended for local use (rabbitmq and postgreSQL in docker)
+A university project developed for the "Distributed Systems" course.
 
-has six components utilizing rabbitmq for communication and postgreSQL for storage
+## Overview
+This system simulates energy consumption and production, using message queues and persistent storage. It consists of **six independent components**, communicating via RabbitMQ and persisting data in PostgreSQL.
 
-energy user and energy producer send rabbitmq messages to specified queues
+## Features
+- Local deployment using Docker (RabbitMQ and PostgreSQL)
+- Two producer components:
+  - **Energy User** and **Energy Producer** send messages to specific RabbitMQ queues
+- Data persistence via PostgreSQL
+- REST API for retrieving current and historical energy data
+- JavaFX GUI for visualizing energy statistics through the REST API
 
-data is written to postgreSQL
-
-javafx gui access rest api for energy data retrieval
+## Tech Stack
+- Java (Spring Boot, JavaFX)
+- RabbitMQ (via Docker)
+- PostgreSQL (via Docker)
+- REST API (JSON responses)
